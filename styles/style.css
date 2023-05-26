@@ -8,7 +8,8 @@
 }
 
 .global_container {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   margin: auto;
 }
 .global_container .global_title {
@@ -44,78 +45,85 @@ header .nav_section {
   position: fixed;
   top: 0px;
   background-color: #fff;
-  z-index: 999;
+  z-index: 10;
 }
-header .nav_section .nav_content {
+header .nav_section .nav_container {
   display: flex;
   align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
 }
-header .nav_section .nav_content .nav_title {
+header .nav_section .nav_container .nav_title {
   width: 30%;
   display: flex;
   flex-direction: column;
   margin: 10px 0px 5px;
   padding: 0px 40px;
 }
-header .nav_section .nav_content .nav_title img {
+header .nav_section .nav_container .nav_title img {
   width: 120px;
   height: 60px;
 }
-header .nav_section .nav_content .nav_title a {
+header .nav_section .nav_container .nav_title a {
   text-decoration: none;
   font-size: 1.25rem;
   font-weight: 600;
   color: #0741ad;
 }
-header .nav_section .nav_content .nav_ul {
-  display: flex;
-  justify-content: flex-end;
-  width: 100%;
+header .nav_section .nav_container nav.nav_content {
+  width: 70%;
 }
-header .nav_section .nav_content .nav_ul li.unique {
+header .nav_section .nav_container nav.nav_content ul.nav_ul {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  padding: 0px 10px;
+}
+header .nav_section .nav_container nav.nav_content ul.nav_ul li.unique {
   padding: 0;
 }
-header .nav_section .nav_content .nav_ul li.unique i.connection {
+header .nav_section .nav_container nav.nav_content ul.nav_ul li.unique i.connection {
   border: 1px solid #e4e4ec;
   border-radius: 50%;
   color: #b8b8b8;
   display: inline-block;
   font-size: 20px;
   height: 48px;
+  margin: 0px 5px;
   line-height: 48px;
   text-align: center;
   width: 48px;
   transition: all 0.5s;
   cursor: pointer;
 }
-header .nav_section .nav_content .nav_ul li.unique i.connection:hover {
+header .nav_section .nav_container nav.nav_content ul.nav_ul li.unique i.connection:hover {
   background-color: #0741ad;
   color: #fff;
 }
-header .nav_section .nav_content .nav_ul .nav_list_item {
+header .nav_section .nav_container nav.nav_content ul.nav_ul .nav_list_item {
   font-size: 1.25rem;
   padding: 0px 30px;
   display: flex;
   align-items: center;
   position: relative;
 }
-header .nav_section .nav_content .nav_ul .nav_list_item i {
-  font-size: 1.4rem;
-  color: #444;
-  transition: all 0.3s;
-  position: relative;
-  top: 2px;
-}
-header .nav_section .nav_content .nav_ul .nav_list_item a {
-  display: flex;
+header .nav_section .nav_container nav.nav_content ul.nav_ul .nav_list_item a {
   color: #444;
   text-decoration: none;
-  padding: 0px 10px;
   transition: all 0.3s;
+  text-align: center;
 }
-header .nav_section .nav_content .nav_ul .nav_list_item:hover i, header .nav_section .nav_content .nav_ul .nav_list_item:hover a {
+header .nav_section .nav_container nav.nav_content ul.nav_ul .nav_list_item a i {
+  transition: all 0.3s;
+  padding-right: 5px;
+}
+header .nav_section .nav_container nav.nav_content ul.nav_ul .nav_list_item:hover a {
   color: #0741ad;
   transform: translateY(-5px);
+}
+header .nav_section .nav_container nav.nav_content ul.nav_ul .nav_list_item:hover a i {
+  color: #0741ad;
 }
 
 .banner {
@@ -125,7 +133,8 @@ header .nav_section .nav_content .nav_ul .nav_list_item:hover i, header .nav_sec
   background-color: #eee;
 }
 .banner .banner_container {
-  width: 1200px;
+  width: 100%;
+  max-width: 1200px;
   height: 100%;
   margin: auto;
 }
@@ -163,7 +172,8 @@ header .nav_section .nav_content .nav_ul .nav_list_item:hover i, header .nav_sec
   padding: 6rem 0rem;
 }
 .about .about_container {
-  width: 1200px;
+  max-width: 1200px;
+  width: 100%;
   height: 700px;
   margin: auto;
   display: flex;
@@ -175,17 +185,17 @@ header .nav_section .nav_content .nav_ul .nav_list_item:hover i, header .nav_sec
 }
 .about .about_container .about_img {
   margin: 0px 20px;
-  widows: 50%;
-  position: relative;
+  width: 50%;
+  height: auto;
 }
 .about .about_container .about_img img {
-  width: 600px;
-  height: 600px;
+  width: 100%;
+  height: 100%;
 }
 .about .about_container .about_txt {
   margin: 0px 20px;
   width: 50%;
-  height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -194,7 +204,7 @@ header .nav_section .nav_content .nav_ul .nav_list_item:hover i, header .nav_sec
   font-weight: 100;
   font-size: 2.5rem;
   color: #5c5a5a;
-  padding: 4rem 0rem 1.5rem;
+  padding: 0rem 0rem 1.5rem;
 }
 .about .about_container .about_txt h2::after {
   content: "";
@@ -390,4 +400,15 @@ footer .footer_content .copyright {
 }
 footer .footer_content .copyright span {
   color: #00d999;
+}
+
+@media screen and (max-width: 1040px) {
+  .nav_section .nav_container .nav_title {
+    width: 20%;
+    padding: 0px 15px;
+  }
+  .nav_section .nav_container .nav_content .nav_ul li.nav_list_item {
+    font-size: 1rem;
+    padding: 0px 50px;
+  }
 }/*# sourceMappingURL=style.css.map */
