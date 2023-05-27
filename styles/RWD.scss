@@ -134,6 +134,12 @@
   }
 }
 @media screen and (max-width: 640px) {
+  #about {
+    .about_container {
+      background-color: #f4e9e9;
+      box-shadow: none;
+    }
+  }
   #mobile_banner {
     h1 {
       font-size: 2.5rem !important;
