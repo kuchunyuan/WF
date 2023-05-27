@@ -1,2 +1,5 @@
-let body = Window.document.querySelector("body"); 
-console.log(body)
+$(document).ready(function(){
+    $(".menu_btn").click( () => {
+        $("nav").toggle().addClass("nav_content_click")
+    })
+})

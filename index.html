@@ -28,15 +28,24 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./styles/RWD.css" />
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
     <header>
-      <div class="nav_section">
+      <div class="nav_section" id="mobile_navSection">
         <div class="nav_container">
           <div class="nav_title">
             <img src="/images/WF-Logo.png" alt="LOGO" />
             <a href="./index.html">萬豐物流有限公司</a>
+          </div>
+          <div class="menu_btn">
+            <div class="btn_span">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
           </div>
           <nav class="nav_content">
             <ul class="nav_ul">
@@ -72,15 +81,15 @@
       </div>
     </header>
     <main>
-      <section class="banner">
+      <section class="banner" id="mobile_banner">
         <div class="banner_container">
           <div class="banner_text">
-            <h1>
+            <h1 id="banner_h1">
               萬豐物流有限公司
-              <small> 兩岸海運、物流、報關服務 </small>
+              <small id="banner_small"> 兩岸海運、物流、報關服務 </small>
             </h1>
             <p>
-              擁有40年的海運、進出口貨物豐富經驗，保持著誠信、專業的服務態度
+              擁有40年的海運、進出口貨物豐富經驗，保持著誠信、專業的服務態度。
             </p>
           </div>
         </div>
@@ -112,7 +121,7 @@
           </div>
         </div>
       </section>
-      <section class="serve">
+      <section class="serve" id="mobile_serve">
         <div class="global_container">
           <div class="global_title">
             <h2>服務項目</h2>
@@ -277,6 +286,7 @@
         </div>
       </div>
     </footer>
+    <script src="/jquery-3.7.0.min.js"></script>
+    <script src="/script.js"></script>
   </body>
-  <script src="/script.js"></script>
 </html>
